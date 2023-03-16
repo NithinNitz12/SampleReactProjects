@@ -21,6 +21,13 @@ function App() {
   const detailsInputBox = <input placeholder = {inputPlaceholder} 
   autoComplete />
 
+  // <-------------------------------------->
+
+  const blogObj = {
+    title: 'Blog Title 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+  }
+
   return (
     <div className="App">
       <h3>Full Name: {`${firstName} ${lastName}`}</h3>
@@ -36,6 +43,24 @@ function App() {
 
       <h3>Full Name: {mObj.name} </h3>
       <p>Age: {mObj.age} </p>
+    
+    
+    {/* <-------------------------------------------> */}
+      <div>
+        <h3>{blogObj.title}</h3>
+        <p>{blogObj.description}</p>
+      </div>
+      <hr></hr>
+      <div>
+        <h3>{blogObj.title}</h3>
+        <p>{blogObj.description}</p>
+      </div>
+      <hr></hr>
+      <div>
+        <h3>{blogObj.title}</h3>
+        <p>{blogObj.description}</p>
+      </div>
+    
     </div>
   );
 }
