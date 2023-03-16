@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './App.css';
 
 function App() {
   const firstName = 'Johnny';
@@ -28,6 +29,7 @@ function App() {
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
   }
 
+
   return (
     <div className="App">
       <h3>Full Name: {`${firstName} ${lastName}`}</h3>
@@ -46,17 +48,15 @@ function App() {
     
     
     {/* <-------------------------------------------> */}
-      <div>
+      <div className="BlogCard">
         <h3>{blogObj.title}</h3>
         <p>{blogObj.description}</p>
       </div>
-      <hr></hr>
-      <div>
+      <div className="BlogCard">
         <h3>{blogObj.title}</h3>
         <p>{blogObj.description}</p>
       </div>
-      <hr></hr>
-      <div>
+      <div className="BlogCard">
         <h3>{blogObj.title}</h3>
         <p>{blogObj.description}</p>
       </div>
