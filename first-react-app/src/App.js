@@ -24,10 +24,31 @@ function App() {
 
   // <-------------------------------------->
 
-  const blogObj = {
-    title: 'Blog Title 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
-  }
+  const blogArr = [
+    {
+      title: 'Blog Title 1',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+    },
+    {
+      title: 'Blog Title 2',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+    },
+    {
+      title: 'Blog Title 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+    }
+  ]
+
+  const blogCards = blogArr.map((item, pos) => {
+    console.log(item);
+
+    return(
+      <div className="BlogCard" key={pos}>
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+      </div> 
+    )
+  })
 
 
   return (
@@ -48,18 +69,11 @@ function App() {
     
     
     {/* <-------------------------------------------> */}
-      <div className="BlogCard">
+      {/* <div className="BlogCard">
         <h3>{blogObj.title}</h3>
         <p>{blogObj.description}</p>
-      </div>
-      <div className="BlogCard">
-        <h3>{blogObj.title}</h3>
-        <p>{blogObj.description}</p>
-      </div>
-      <div className="BlogCard">
-        <h3>{blogObj.title}</h3>
-        <p>{blogObj.description}</p>
-      </div>
+      </div> */}
+      {blogCards}
     
     </div>
   );
