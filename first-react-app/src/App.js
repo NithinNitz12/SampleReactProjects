@@ -27,28 +27,31 @@ function App() {
 
   const blogArr = [
     {
+      id: 1,
       title: 'Blog Title 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
     },
     {
+      id: 2,
       title: 'Blog Title 2',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
     },
     {
+      id: 3,
       title: 'Blog Title 3',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
     }
   ]
 
   const blogCards = blogArr.map((item, pos) => {
-    console.log(item);
+    // console.log(item);
 
     return(
       // <div className="BlogCard" key={pos}>
       //   <h3>{item.title}</h3>
       //   <p>{item.description}</p>
       // </div> 
-      <BlogCard key={pos}/>
+      <BlogCard key={pos} title= {item.title} description={item.description} id={item.id}/>
     )
   })
 

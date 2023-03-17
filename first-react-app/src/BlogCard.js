@@ -1,11 +1,12 @@
 import React from 'react';
 
 //Functional component
-const BlogCard = () =>{
+const BlogCard = (props) =>{
+    console.log(props)
     return(
         <div className="BlogCard">
-        <h3>Blog Title</h3>
-        <p>Blog Description</p>
+        <h3>{props.title}</h3>
+        <p>{props.description}</p>
       </div> 
     )
 }
