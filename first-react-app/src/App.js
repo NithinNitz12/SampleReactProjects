@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import './App.css';
+import BlogCard from './BlogCard';
 
 function App() {
   const firstName = 'Johnny';
@@ -43,10 +44,11 @@ function App() {
     console.log(item);
 
     return(
-      <div className="BlogCard" key={pos}>
-        <h3>{item.title}</h3>
-        <p>{item.description}</p>
-      </div> 
+      // <div className="BlogCard" key={pos}>
+      //   <h3>{item.title}</h3>
+      //   <p>{item.description}</p>
+      // </div> 
+      <BlogCard key={pos}/>
     )
   })
 
