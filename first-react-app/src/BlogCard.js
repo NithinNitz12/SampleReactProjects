@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { dumpLogs } from './Utils';
+
 //Functional component
 const BlogCard = (props) =>{
-    console.log(props)
+    dumpLogs(props);
     return(
         <div className="BlogCard">
         <h3>{props.title}</h3>
