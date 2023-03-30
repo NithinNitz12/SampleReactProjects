@@ -17,7 +17,7 @@ function TicTacToe(){
   const player = CIRCLE;
   const positions = [
     CROSS,EMPTY,CIRCLE,
-    EMPTY,EMPTY,EMPTY,
+    EMPTY,CIRCLE,EMPTY,
     EMPTY,EMPTY,EMPTY
   ];
 
@@ -47,13 +47,18 @@ function Square({position, value}){
 
 function Circle(){
   return (
-  <div>Circle</div>
+  <svg width="100" height="100" viewbox="-50 -50 100 100" className='circle'>
+    <circle cx="50" cy="50" r="40" />
+  </svg>
   );
 }
 
 function Cross(){
   return (
-  <div>Cross</div>
+  <svg width="100" height="100" viewbox="-50 -50 100 100" className='cross'>
+    <line x1="-40" y1="-40" x2="40" y2="40" />
+    <line x1="-40" y1="40" x2="40" y2="-40" />
+  </svg>
   );
 }
 
