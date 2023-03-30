@@ -64,7 +64,8 @@ class App extends Component {
   })
 
   onHideBtnClick = () => {
-    this.setState({showBlogs: false});
+    let updatedState = !this.state.showBlogs;
+    this.setState({showBlogs: updatedState});
     console.log(this.showBlogs);
   }
 
@@ -74,7 +75,7 @@ class App extends Component {
         <button onClick={this.onHideBtnClick}>Hide List</button>
       <br></br>
       {
-        this.showBlogs ? this.blogCards : null
+        this.state.showBlogs ? this.blogCards : null
       }
       </div>
     );
