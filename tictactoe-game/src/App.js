@@ -18,7 +18,7 @@ function TicTacToe(){
   const positions = [
     CROSS,EMPTY,CIRCLE,
     EMPTY,CIRCLE,EMPTY,
-    EMPTY,EMPTY,EMPTY
+    EMPTY,CROSS,EMPTY
   ];
 
   return (
@@ -56,8 +56,8 @@ function Circle(){
 function Cross(){
   return (
   <svg width="100" height="100" viewbox="-50 -50 100 100" className='cross'>
-    <line x1="-40" y1="-40" x2="40" y2="40" />
-    <line x1="-40" y1="40" x2="40" y2="-40" />
+    <line x1="10" y1="10" x2="80" y2="80" />
+    <line x1="10" y1="80" x2="80" y2="10" />
   </svg>
   );
 }
