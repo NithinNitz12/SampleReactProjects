@@ -64,15 +64,18 @@ class App extends Component {
   })
 
   onHideBtnClick = () => {
-    let updatedState = !this.state.showBlogs;
-    this.setState({showBlogs: updatedState});
-    console.log(this.showBlogs);
+    // let updatedState = !this.state.showBlogs;
+    this.setState((prevState, prevProps) => {
+      return {showBlogs: !prevState.showBlogs}
+    });
+    console.log(this.state.showBlogs);
   }
 
   render() {
+    console.log('Render Called');
     return(
       <div className="App">
-        <button onClick={this.onHideBtnClick}>Hide List</button>
+        <button onClick={this.onHideBtnClick}>{this.state.showBlogs ? 'Hide List' : 'Show List'}</button>
       <br></br>
       {
         this.state.showBlogs ? this.blogCards : null
