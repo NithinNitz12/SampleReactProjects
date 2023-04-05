@@ -36,19 +36,25 @@ class App extends Component {
       id: 1,
       title: 'Blog Title 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+      likeCount:0,
     },
     {
       id: 2,
       title: 'Blog Title 2',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+      likeCount:0,
     },
     {
       id: 3,
       title: 'Blog Title 3',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer libero lorem',
+      likeCount:0,
     }
   ]
 
+  onLikeBtnClick = () => {
+    alert('Like Button Clicked');
+  }
  
 
   blogCards = isArrayEmpty(this.blogArr) ? [] : this.blogArr.map((item, pos) => {
@@ -59,7 +65,7 @@ class App extends Component {
       //   <h3>{item.title}</h3>
       //   <p>{item.description}</p>
       // </div> 
-      <BlogCard key={pos} title= {item.title} description={item.description} id={item.id}/>
+      <BlogCard className={'Blog'} key={pos} title= {item.title} description={item.description} likeCount={item.likeCount} id={item.id} onLikeBtnClick={this.onLikeBtnClick}/>
     )
   })
 
@@ -70,6 +76,8 @@ class App extends Component {
     });
     console.log(this.state.showBlogs);
   }
+
+ 
 
   render() {
     console.log('Render Called');
