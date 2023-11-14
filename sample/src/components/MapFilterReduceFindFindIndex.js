@@ -12,35 +12,33 @@ function double(x) {
 }
 
 var newNumbers = numbers.map(double);
-// OR 
+// OR
 // var newNumbers = numbers.map(function(x){
-//    return x*2; 
+//    return x*2;
 //});
 
 var logValues = console.log(newNumbers);
 
 // Filter - Create a new array by keeping the items that return true.
-newNumbers = numbers.filter(function(num){
-  return num < 10;
-});
+newNumbers = numbers.filter((num) => num < 10);
 logValues = console.log(newNumbers);
 
 // Reduce - Accumulate a value by doing something to each item in an array.
-newNumbers = numbers.reduce(function(accumulator, currentNumber){
+newNumbers = numbers.reduce((accumulator, currentNumber) => {
   return accumulator + currentNumber;
-})
+});
 logValues = console.log(newNumbers);
 
 // Find - Find the first item that matches from an array.
-newNumbers = numbers.find(function(num){
+newNumbers = numbers.find((num) => {
   return num > 10;
-})
+});
 logValues = console.log(newNumbers);
 
 // FindIndex - Find the index of the first item that matches.
-newNumbers = numbers.findIndex(function(num){
+newNumbers = numbers.findIndex((num) => {
   return num > 10;
-})
+});
 logValues = console.log(newNumbers);
 
 export default logValues;
